@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/knowledge_lib/knowledge_lib",
+    "pages/content/content",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/knowledge_lib_2nd/knowledge_lib_2nd",
+    "pages/push/push",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2151d1",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#1d8ec0",
+    "selectedColor":"#ad1c09", 
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/push/push",
+        "text": "推送",
+        "iconPath": "/images/tabbar/zhuanjiejilu.png",
+        "selectedIconPath": "/images/tabbar/zhuanjiejilu-2.png"
+      },
+      {
+        "pagePath": "pages/knowledge_lib/knowledge_lib",
+        "text": "知识库",
+        "iconPath": "/images/tabbar/rizhiguanli.png",
+        "selectedIconPath": "/images/tabbar/rizhiguanli-2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "/images/tabbar/kesuguanli.png",
+        "selectedIconPath": "/images/tabbar/kesuguanli-2.png"
+      }
+    ]
+  },
+  "enablePullDownRefresh": false
+}

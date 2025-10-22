@@ -1,0 +1,63 @@
+<!--pages/knowledge_lib/knowledge_lib.wxml-->
+<view class="a-container">
+  <view class="search-container">
+    <view class="search">
+      <view class="address">
+        <t-cell class="block2" title="地区" arrow hover note="{{areaText}}" bind:click="onAreaPicker" />
+        <t-picker
+          visible="{{areaVisible}}"
+          value="{{areaValue}}"
+          title="选择地区"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onPickerChange"
+          bindpick="onColumnChange"
+          bindcancel="onPickerCancel">
+          <t-picker-item options="{{provinces}}"></t-picker-item>
+          <t-picker-item options="{{cities}}"></t-picker-item>
+          <t-picker-item options="{{counties}}"></t-picker-item>
+        </t-picker>
+      </view>
+      <view class="circle"></view>
+      <view class="search-box">
+      <view class="app-name">
+        <view class="app-name-b"><image src="/images/logo.png"></image></view>
+      </view>
+      <view class="q">
+        <view class="q_input"><input bindconfirm="MsgUp" confirm-type="search" bindinput="search_input" type="text" placeholder="请输入搜索内容"/></view>
+        <view class="img" bindtap="MsgUp"><image src="/images/search.png"></image></view>
+      </view>
+      <view class="hot-title">
+        <text decode="{{true}}" class="hot-title-l">热搜&nbsp;｜&nbsp;</text>
+        <text decode="{{true}}" class="hot-title-r">人工智能&nbsp;&nbsp;补助&nbsp;&nbsp;税收</text>
+      </view>
+      </view>
+    </view>
+  </view>
+<view class="types">
+  <t-grid class="block" column="{{4}}" theme="card">
+    <t-grid-item text="人才支持" image="{{img1}}" data-type="人才支持" bindtap="to2nd"/>
+    <t-grid-item text="创新创业" image="{{img2}}" data-type="创新创业" bindtap="to2nd"/>
+    <t-grid-item text="税收政策" image="{{img3}}" data-type="税收政策" bindtap="to2nd"/>
+    <t-grid-item text="企业经营" image="{{img4}}" data-type="企业经营" bindtap="to2nd"/>
+    <t-grid-item text="产业发展" image="{{img5}}" data-type="产业发展" bindtap="to2nd"/>
+    <t-grid-item text="重点项目" image="{{img6}}" data-type="重点项目" bindtap="to2nd"/>
+    <t-grid-item text="奖励补贴" image="{{img7}}" data-type="奖励补贴" bindtap="to2nd"/>
+    <t-grid-item text="政策采购" image="{{img8}}" data-type="政策采购" bindtap="to2nd"/>
+  </t-grid>
+</view>
+
+  <view class="p-map"></view>
+  <view class="hot">
+    <view class="hot-title">
+      <view class="hot-title-pic"><image src="/images/热门.png" alt=""></image></view>
+      <view class="hot-title-name">热门政策</view>
+    </view>
+    <view class="hot-policy" wx:for="{{hot_policy}}" wx:key="unique" bindtap="tocontent" data-pid="{{item.pid}}">
+      <view class="hot-policy-item">
+        <view class="item-tit">{{item.title}}</view>
+        <text decode="{{true}}" class="item-info">{{item.department}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.datetime}}</text>
+      </view>
+    </view>
+  </view>
+</view>

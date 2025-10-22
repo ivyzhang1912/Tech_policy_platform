@@ -1,0 +1,103 @@
+/* pages/content/content.wxss */
+page{
+  background-color: var(--themeBgColor);
+}
+.cnt-box{
+  width: 88vw;
+  margin: auto;
+}
+.tit{
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-weight: 500;
+  font-size: 38rpx;
+}
+.info{
+  display: flex;
+  color:#888; 
+  font-size: 28rpx;
+}
+.department, .date{
+  flex: 5;
+  display: inline;
+}
+.department-pic, .date-pic, .department-name, .date-name{
+  display: inline;
+}
+.department-pic image, .date-pic image{
+  width: 5vw;
+  height: 5vw;
+}
+.cnt{
+  padding-top: 4vh;
+  padding-bottom: 10vh;
+  color: #555;
+  line-height: 2em;
+  font-size: 32rpx;
+  white-space: pre-line;
+}
+.fixed-box{
+  background-color: #dbdbe2;
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon{
+  margin-left: 3vw;
+}
+
+.star, .share{
+  display: inline;
+  padding: 2vw;
+  background-color: transparent;
+}
+/* 去掉button默认边框 */
+.share::after{
+  border: none;
+}
+.share image, .star image{
+  width: 6vw;
+  height: 6vw;
+}
+.block {
+  background: #fff;
+  color: #555;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.block--top,
+.block--bottom {
+  width: 100vw;
+  height: 70vh;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.wrapper + .wrapper {
+  margin-top: 32rpx;
+}
+.abstract{
+  margin-right: 4vw;
+  color: var(--themeColor);
+  font-weight: 600;
+  background-color: #fff;
+  padding: 2vw;
+  border-radius: 1.5em;
+}
+.abs view{
+  font-size: 32rpx;
+  margin: 6vh 8vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: 2em;
+  /* width: 80vw; */
+  /* padding-right: 50vw; */
+}
+.abs view::-webkit-scrollbar{
+  display: none;
+}

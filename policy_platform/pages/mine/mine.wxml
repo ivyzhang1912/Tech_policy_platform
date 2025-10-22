@@ -1,0 +1,20 @@
+<!--pages/mine/mine.wxml-->
+<page-meta>
+  <navigation-bar title="{{nbtitle}}" front-color="{{nbfontcolot}}" background-color="{{nbbgcolor}}"/>
+</page-meta>
+<view class="d-container">
+  <view class="q">
+    <view class="q_input"><input type="text" placeholder="请输入搜索内容"/></view>
+    <view class="img"><image src="/images/search.png" alt=""/></view>
+  </view>
+
+  <view class="proj-type-cnt">
+    <view class="hot-policy" wx:for="{{choice_policy}}" wx:key="unique">
+      <view class="hot-policy-item" bindtap="tocontent" data-pid="{{item.pid}}">
+        <view class="item-tit">{{item.title}}</view>
+        <text decode="{{true}}" class="item-info">{{item.department}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.datetime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

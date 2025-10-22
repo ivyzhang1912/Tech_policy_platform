@@ -1,0 +1,142 @@
+/* pages/knowledge_lib/knowledge_lib.wxss */
+
+page{
+  background-color: var(--themeBgColor);
+}
+.address{
+  z-index: 999;
+  position: absolute;
+  top: 1vh;
+  left: 4vw;
+  width: 70vw;
+}
+
+.a-container{
+  position: relative;
+}
+.search-container{
+  position: fixed;
+  z-index: 1;
+}
+.search{
+  position: relative;
+}
+.circle{
+  position: absolute;
+  background-color: var(--themeColor);
+  height: 40vh;
+  width: 130vw;
+  overflow: hidden;
+  border-radius: 50%;
+  top: -10vh;
+  left: -16vw;
+}
+.search-box{
+  width: 90vw;
+  height: 21vh;
+  background-color: #fff;
+  border-radius: 1em;
+  position: absolute;
+  left: 5vw;
+  top: 11vh;
+  box-sizing: border-box;
+  padding: 3vh;
+}
+.app-name{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.app-name-b{
+  width: 40vw;
+  height: 6.5vh;
+}
+.app-name image{
+  width: 100%;
+  height: 100%;
+}
+
+.q{
+  background-color: rgb(250, 245, 245);
+  border-radius: .5em;
+  margin: 1vh 0vh;
+  display: flex;
+}
+.q_input{
+  flex: 11;
+  margin-left: 2vw;
+}
+.img{
+  flex: 2;
+  text-align: center;
+}
+.img>image{
+  margin-top: 15rpx;
+  width: 50%;
+  height: 60%;
+}
+.q_input input{
+  padding: 1vh;
+}
+.hot-title{
+  margin-top: 20rpx;
+}
+.hot-title-l{
+  font-size: 32rpx;
+  color: rgb(214, 25, 25);
+  font-weight: 500;
+}
+.hot-title-r{
+  font-size: 26rpx;
+  padding-top: 4rpx;
+}
+.block {
+  display: block;
+}
+.types{
+  padding-top: 35vh;
+}
+.hot{
+  margin: 5vw;
+}
+.hot-title{
+  display: flex;
+  font-size: 34rpx;
+}
+.hot-title-pic{
+  width: 6vw;
+  height: 6vw;
+  margin-right: 1vw;
+}
+.hot-title-pic image{
+  width: 100%;
+  height: 100%;
+}
+.hot-policy-item{
+  background-color: #fff;
+  padding: 5vw;
+  margin-top: 2vh;
+  border-radius: .5em;
+}
+.item-tit{
+  font-size: 30rpx;
+  line-height: 1.7em;
+  margin-bottom: 7vw;
+}
+.item-info{
+  font-size: 26rpx;
+  color: rgb(136, 124, 124);
+}
+.address-pic{
+  position: absolute;
+  top: 5vh;
+  left: 3vw;
+  z-index: 999;
+}
+
+.block2 {
+  display: block;
+  margin-bottom: 32rpx;
+  z-index: 10000;
+}
+

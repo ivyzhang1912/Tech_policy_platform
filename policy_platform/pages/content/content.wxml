@@ -1,0 +1,40 @@
+<!--pages/content/content.wxml-->
+<page-meta>
+  <navigation-bar title="{{nbtitle}}" front-color="{{nbfontcolot}}" background-color="{{nbbgcolor}}"/>
+</page-meta>
+<view class="c-container">
+  <view class="cnt-box">
+    <view class="tit">{{res.title}}</view>
+    <view class="info">
+      <view class="department">
+        <view class="department-pic"><image src="/images/地点.png" alt=""></image></view>
+        <view class="department-name">{{res.department}}</view>
+      </view>
+      <view class="date">
+        <view class="date-pic"><image src="/images/时间.png" alt=""></image></view>
+        <view class="date-name">{{res.datetime}}</view>
+      </view>
+    </view>
+    <view class="cnt">{{res.txt}}</view>
+  </view>
+  <view class="fixed-box">
+    <view class="icon">
+      <view class="star" bindtap="star"><image src="{{changestar=='true'?starselected:star}}" alt=""></image></view>
+      <button open-type="share" class="share"><image src="/images/转发.png" alt=""></image></button>
+    </view>
+      <view>
+        <t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="{{cur.value || 'top'}}">
+          <view class="abs block block--{{cur.value}}"><view>{{cur.text}}</view></view>
+        </t-popup>
+        <t-button class="abstract"
+          wx:key="index"
+          block
+          size="large"
+          variant="outline"
+          theme="primary"
+          bind:tap="handlePopup"
+          data-item="{{position}}"
+          t-class="wrapper">查看政策摘要</t-button>
+      </view>
+  </view>
+</view>

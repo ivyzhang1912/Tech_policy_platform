@@ -1,0 +1,6 @@
+/**app.wxss**/
+page{
+  --themeColor: #2e50ca;
+  --themeBgColor: rgb(250, 245, 245);
+}
+

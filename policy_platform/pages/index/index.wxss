@@ -1,0 +1,101 @@
+/**index.wxss**/
+page{
+  background-color: var(--themeBgColor);
+  height: 100vh;
+}
+
+/* .header{
+  padding: 0vh 5vw;
+  position: relative;
+}
+.btn-login {
+  padding: 8%;
+  background: #eee;
+} */
+/* .btn-login button{
+  background-color: #336666;
+} */
+.userinfo-box{
+  background-color: var(--themeColor);
+  height: 20vh;
+}
+/* .userinfo{
+  padding-top: 6vh;
+  padding-left: 5vw;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
+/* .userinfo-avatar {
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+}
+.userinfo-nickname {
+  font-size: 34rpx;
+  padding-left: 3vw;
+}
+.userinfo-none{
+  padding-top: 4vh;
+} */
+.rectangle{
+  background-color: #fff;
+  width: 100vw;
+  height: 3vh;
+  position: relative;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  top: -3vh;
+}
+.icon{
+  position: relative;
+  top: -3vh;
+}
+.block {
+  display: block;
+  margin-bottom: 32rpx;
+}
+.wrapper {
+  margin-bottom: 32rpx;
+}
+
+/* .long-content {
+  height: 576rpx;
+  margin-top: 16rpx;
+  font-size: 32rpx;
+  color: #888;
+}
+
+.long-content .content-container {
+  white-space: pre-line;
+} */
+.others{
+  background-color: #fff;
+  padding-bottom: 50vh;
+  overflow: hidden;
+}
+.others-info{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 5vw 3vw;
+  border-bottom: 1px solid #eee;
+  font-size: 34rpx;
+}
+
+.others-info-pic, .others-info t-button{
+  display: inline;
+}
+.others-info-pic image{
+  width: 8vw;
+  height: 8vw;
+  margin-right: 4vw;
+}
+.message-example {
+  margin: 32rpx;
+}
+
+.external-class {
+  margin: 0 0 32rpx 0;
+}
+

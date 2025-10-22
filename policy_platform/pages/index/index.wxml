@@ -1,0 +1,38 @@
+<view class="about_outer_container">
+  <!-- <button type='primary' bindtap='getOpenid'>获取用户openid</button><text>{{openid}}</text> -->
+  <view class="userinfo-box">
+    <view class="userinfo">
+      <!-- <block wx:if="{{!hasUserInfo}}">
+        <text class="userinfo-none" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </text>
+        <text wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </text>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block> -->
+    </view>
+  </view>
+  <view class="rectangle"></view>
+  <view class="icon">
+    <t-grid class="block" column="{{3}}">
+      <t-grid-item text="浏览记录" image="{{img1}}" bindtap="to2nd" data-mine="浏览记录"/>
+      <t-grid-item text="我的收藏" image="{{img2}}" bindtap="to2nd"  data-mine="我的收藏"/>
+      <t-message id="t-message" />
+      <t-button t-class="external-class" theme="primary" variant="outline" size="large" block bind:tap="showCloseMessage"><t-grid-item text="信息通知" image="{{img3}}"/></t-button>
+    </t-grid>
+  </view>
+  <view class="others">
+    <view class="others-info" wx:for="{{otherinfo}}" wx:key="unique">
+        <view class="others-info-pic"><image src="{{item.src}}"></image></view>
+        <t-button
+        t-class="wrapper"
+        theme="primary"
+        size="large"
+        variant="outline"
+        data-key="showContentOnly"
+        bind:tap="showDialog"
+        block>{{item.infotit}}</t-button>
+        <t-dialog visible="{{showContentOnly}}" content="{{ item.info }}" confirm-btn="{{ confirmBtn }}" bind:confirm="closeDialog" />
+    </view>
+  </view>
+</view>

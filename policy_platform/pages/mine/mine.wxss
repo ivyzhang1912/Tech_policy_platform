@@ -1,0 +1,59 @@
+/* pages/knowledge_lib_2nd/knowledge_lib_2nd.wxss */
+page{
+  background-color: var(--themeBgColor);
+}
+
+.q{
+  background-color: #fff;
+  border-radius: 1em;
+  display: flex;
+  padding: .5vw;
+  width: 90%;
+  margin: auto;
+  margin-top: 2vh;
+}
+.q_input{
+  flex: 11;
+  margin-left: 2vw;
+}
+.img{
+  flex: 2;
+  text-align: center;
+}
+.img>image{
+  margin-top: 15rpx;
+  width: 40%;
+  height: 60%;
+}
+.q_input input{
+  padding: 1vh;
+}
+.proj-type-cnt{
+  width: 90vw;
+  margin: auto;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+}
+.hot-policy-item{
+  background-color: #fff;
+  padding: 5vw;
+  margin-bottom: 2vh;
+  border-radius: .5em;
+}
+.item-tit{
+  font-size: 30rpx;
+  line-height: 1.7em;
+  margin-bottom: 7vw;
+}
+.item-info{
+  font-size: 24rpx;
+  color: rgb(136, 124, 124);
+}
+.choice-box{
+  margin-top: 1.5vh;
+}
+.count{
+  font-size: 24rpx;
+  margin-left: 5vw;
+  margin-top: 2vh;
+}

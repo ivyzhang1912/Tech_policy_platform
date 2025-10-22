@@ -1,0 +1,24 @@
+<view class="b-container">
+  <view class="address"></view>
+
+  <view class="proj-type">
+
+    <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+      <t-tab-panel label="政策通知" value="0" />
+      <t-tab-panel label="政策解读" value="1" />
+      <t-tab-panel label="最新资讯" value="2" />
+    </t-tabs>
+    <view class="q">
+        <view class="q_input"><input type="text" placeholder="请输入搜索内容"/></view>
+        <view class="img"><image src="/images/search.png" alt=""/></view>
+    </view>
+  </view>
+  <view class="proj-type-cnt">
+    <view class="hot-policy" wx:for="{{push_policy}}" wx:key="unique">
+      <view class="hot-policy-item" bindtap="tocontent" data-pid="{{item.pid}}">
+        <view class="item-tit">{{item.title}}</view>
+        <text decode="{{true}}" class="item-info">{{item.department}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.datetime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
