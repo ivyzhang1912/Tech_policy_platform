@@ -20,11 +20,11 @@ Page({
     showMultiTextAndTitle: false,
     otherinfo: [{
       'infotit': '联系我们',
-      'info':'开发团队：pyer3.0\n所属单位：南农大自然语言处理学社\n客服微信：wxid_syowupj81wx712',
+      'info':'开发团队：pyer3.0\n所属单位：南农大自然语言处理学社',
       'src': '/images/联系我们.png'
     }, {
       'infotit': '关于我们',
-      'info':'开发团队：pyer3.0\n所属单位：南农大自然语言处理学社\n客服微信：wxid_syowupj81wx712',
+      'info':'开发团队：pyer3.0\n所属单位：南农大自然语言处理学社',
       'src': '/images/关于我们.png'
     }]
   },
