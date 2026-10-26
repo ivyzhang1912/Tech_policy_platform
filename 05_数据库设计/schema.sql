@@ -1,4 +1,4 @@
--- 科政鸣数据库表结构（MySQL 8.0）
+-- 科政明数据库表结构（MySQL 8.0）
 CREATE DATABASE IF NOT EXISTS tech_policy DEFAULT CHARSET utf8mb4;
 USE tech_policy;
 
