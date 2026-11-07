@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 
-# 处理
+# 从采集的网页文本中提取政策正文，保留后续摘要与检索需要的文本内容。
+# 清洗规则基于不同来源页面中可识别的页眉、页脚标记。
 def deal(i):
     # 1 切片
     l_idx = 0
@@ -12,6 +13,7 @@ def deal(i):
     x3, x4 = '阅读原文 ', '阅读量'
     x5, x6, x7, x8 = '>>>企业信息一键对比，点击一下，快速了解企业差异<<<', '>>>如需查询更多的通过名单，请点击阅读原文<<<', '科技政策推送查讯', '科技政策推送查询'
 
+    # 优先跳过订阅提示、公众号页头等非政策正文内容。
     # 1.1 确定切片左idx
     if x1 in i:
         l_idx = i.index(x1) + len(x1)
@@ -25,6 +27,7 @@ def deal(i):
             l_idx = i.index(x7) + len(x7)
         if x8 in i:
             l_idx = i.index(x8) + len(x8)
+    # 根据阅读量、原文链接等页尾标识确定正文结束位置。
     # 1.2 确定切片右idx
     if x0 in i:
         r_idx = i.index(x0)
@@ -34,6 +37,7 @@ def deal(i):
         r_idx = i.index(x4)
     y = i[l_idx:r_idx]
 
+    # 丢弃空行及仅包含部分空白字符的行，尽量保持正文段落顺序。
     # 2 分行处理
     y1 = y.splitlines()
     y2 = []
