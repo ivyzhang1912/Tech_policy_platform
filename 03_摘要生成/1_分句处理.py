@@ -2,6 +2,7 @@
 
 import pandas as pd
 
+# 将清洗后的政策正文转换为逐行排列的句子，供后续摘要处理使用。
 def trans(txt):
     st = []
 
@@ -17,6 +18,7 @@ def trans(txt):
                         break
         st.extend(i)
 
+    # 统一句末标点，避免下游处理时混用冒号、分号与句号。
     # 2 去除句子两旁空格 并 保证句末为句号
     for i in range(len(st)):
         st[i] = st[i].strip()
@@ -42,6 +44,7 @@ if __name__ == '__main__':
     # 1 读取
     cnt = pd.read_csv('清洗数据/清洗文本.csv')
     pid, txt = list(cnt['序号']), list(cnt['文本'])
+    # 按政策序号单独输出文本文件，便于后续逐文档处理。
     # 2 处理并写入
     for x, y in zip(pid, txt):
         with open('res/' + str(x) + '.txt', 'x') as f:
