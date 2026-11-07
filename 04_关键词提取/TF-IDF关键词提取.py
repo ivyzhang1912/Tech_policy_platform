@@ -38,6 +38,8 @@ def fun(path):
             fileArray.append(eachpath)
     return fileArray 
 
+# 逆向最大匹配：从句尾向前寻找词典中的最长候选词，
+# 并过滤停用词；maxWordLength 控制每次尝试的最大词长。
 def BMM(worddict1,worddict2, maxWordLength, sentence):  #最大逆向匹配函数
     result = []
     while len(sentence) != 0:
@@ -55,6 +57,7 @@ def BMM(worddict1,worddict2, maxWordLength, sentence):  #最大逆向匹配函�
 
 num=-1
 
+# 为每条政策生成独立分词结果，供后续统计文档频率与词频。
 for p in cols:  #分词阶段，对文件夹里的所有文本进行分词保存
     num+=1
     dict1=readdict("词表/words.xlsx")
@@ -94,6 +97,7 @@ tf=dict()#计算tf=文档内词频/文档内词语总数
 l=dict()
 dic2=dict()#总的词频
 count=1
+# 第一遍遍历：统计每个词出现在多少篇文档中（DF），同一文档只计一次。
 while count<=3029:#此处的结果指的是之前为每个文本分词得到的结果
     text="" 
     with open ('结果2/txt'+str(count)+".txt",'r',encoding='utf-8')as f:
@@ -137,6 +141,8 @@ while count<=3029:#此处的结果指的是之前为每个文本分词得到的�
     f.close()
     dic.clear()
     count+=1
+# 第二遍遍历：计算文档内归一化词频 TF，以及 TF × log(N / DF)。
+# 这里的 N=3029 是此批政策数据的文档总数。
 count=1
 while count<=3029:
     with open ('结果2/txt'+str(count)+".txt",'r',encoding='utf-8')as f:
@@ -187,6 +193,7 @@ def fun(path):#遍历文件夹函数
             eachpath = str(root+'/'+fn)
             fileArray.append(eachpath)
     return fileArray 
+# 将每篇政策的关键词评分结果写回工作簿第 12 列。
 count=2
 
 for i in range(1,3030):
